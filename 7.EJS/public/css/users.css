@@ -1,0 +1,145 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background-color: #222;
+   color: #fff;
+}
+
+.btn{
+   position: absolute;
+   top: 50px;
+   left: 50px;
+   padding: 10px 30px;
+   border: none;
+   background-color: transparent;
+}
+
+i{
+   color: white;
+   font-size: 40px;
+}
+
+a{
+   text-decoration: none;
+   font-size: 20px;
+   color: #000;
+}
+
+tr th{
+   font-size: 30px;
+   border-bottom: 1px solid white;
+}
+
+tr td{
+   position: relative;
+
+}
+table{
+   border-spacing: 30px;
+}
+li{
+   color: rgb(255, 255, 255);
+   /* color: transparent; */
+   font-size: 20px;
+}
+
+
+
+/* li::before{
+   content: var(--x);
+   position: relative;
+   top: 0;
+   left: 0;
+   height: 100%;
+   color: #fff;
+   overflow: hidden;
+   font-size: 20px;
+   white-space: nowrap;
+   border-right: 1px solid #fff;
+   animation: type steps(7) infinite;
+   animation-delay: 2s;
+   animation-duration: 5s;
+}
+
+@keyframes type{
+   0%{
+      width: 0;
+   }
+   100%{
+      width: 100%;
+   }
+} */
+
+
+
+
+li:nth-child(even) {
+   color: #a3a3a3;
+}
+
+i:nth-child(1){
+   animation: one 1s linear infinite;
+}
+i:nth-child(2){
+   animation: two 1s linear infinite;
+}
+i:nth-child(3){
+   animation: three 1s linear infinite;
+}
+
+@keyframes one{
+   0%{opacity: 0;}
+   20%{opacity: 0;}
+   40%{opacity: 0;}
+   60%{opacity: 1;}
+   80%{ opacity: 1;}
+   100%{opacity: 0;}
+}
+@keyframes two{
+   0%{opacity: 0;}
+   20%{opacity: 0;}
+   40%{opacity: 1;}
+   60%{opacity: 1;}
+   80%{ opacity: 0;}
+   100%{opacity: 0;}
+}
+@keyframes three{
+   0%{opacity: 0;}
+   20%{opacity: 1;}
+   40%{opacity: 1;}
+   60%{opacity: 0;}
+   80%{ opacity: 0;}
+   100%{opacity: 0;}
+}
+
+#line{
+   position: absolute;
+   height: 100%;
+   width: 700px;
+   left: 50px;
+   z-index: -1;
+   animation: anim 2s linear infinite;
+}
+
+@keyframes anim{
+   0%{
+      box-shadow: -10px 0px 10px 0px rgb(90, 90, 90), inset 250px 0px 300px -200px rgb(181, 207, 209),
+      inset 80px 0 20px -70px rgb(103, 225, 255);
+   }
+   50%{
+      box-shadow: -10px 0px 10px 0px rgb(90, 90, 90), inset 250px 0px 300px -200px rgb(104, 186, 190),
+      inset 80px 0 20px -70px rgb(103, 225, 255);
+   }
+   100%{
+      box-shadow: -10px 0px 10px 0px rgb(90, 90, 90), inset 250px 0px 300px -200px rgb(181, 207, 209),
+      inset 80px 0 20px -70px rgb(103, 225, 255);
+   }
+}

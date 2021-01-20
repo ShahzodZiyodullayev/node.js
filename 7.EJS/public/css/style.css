@@ -1,0 +1,155 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body{
+   width: 100%;
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-image: url(../image/2.jpg);
+   background-color: rgba(0, 0, 0, 0.6);
+   background-blend-mode: multiply;
+   background-size: cover;
+   font-family: sans-serif;
+   color: white;
+   transition: .7s;
+}
+
+#content{
+   text-align: center;
+   position: relative;
+   width: 200px;
+   height: 200px;
+   padding: 0 60px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+#content a{
+   cursor: pointer;
+   font-weight: 700;
+   color: white;
+   text-decoration-line: none;
+   font-size: 20px;  
+   transition: .3s;
+}
+
+#content button:hover{
+   background: #333;
+}
+
+.div{
+   position: relative;
+   margin: 50px;
+   transition: .7s;
+}
+
+.div span:nth-child(1){
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   border: 1px solid rgb(35, 112, 228);
+   border-radius: 30% 100% 100% 40% / 30% 40% 100% 100%;
+   transition: .5s;
+   animation: animate 6s linear infinite;
+}
+.div span:nth-child(2){
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   border: 1px solid rgb(35, 112, 228);
+   border-radius: 30% 100% 100% 40% / 30% 40% 100% 100%;
+   transition: .5s;
+   animation: animate 8s linear infinite;
+}
+.div span:nth-child(3){
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   border: 1px solid rgb(35, 112, 228);
+   border-radius: 30% 100% 100% 40% / 30% 40% 100% 100%;
+   transition: .5s;
+   animation: animate 10s linear infinite;
+}
+
+.div:hover span:nth-child(1){
+   background: rgba(35, 112, 228, .7);
+}
+
+.div:hover span:nth-child(2){
+   background: rgba(35, 112, 228, .8);
+}
+
+.div:hover span:nth-child(3){
+   background: rgba(35, 112, 228, .3);
+}
+.div:hover{
+   transform:scale(1.1);
+}
+
+
+/* ------------------------------------------------------- */
+
+#textOne{
+   display: none;
+   position: absolute;
+   left: 5%;
+   color: transparent;
+}
+
+#textTwo{
+   display: none;
+   position: absolute;
+   right: 10%;
+   color: transparent;
+}
+
+#textOne h1::before{
+   content: attr(data-text);
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   color: #fff;
+   overflow: hidden;
+   border-right: 1px solid #fff;
+   animation: type 1s steps(43);
+   white-space: nowrap;
+}
+
+#textTwo h1::before{
+   content: attr(data-text);
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   color: #fff;
+   overflow: hidden;
+   border-right: 1px solid #fff;
+   animation: type 1s steps(31);
+   white-space: nowrap;
+}
+
+@keyframes type{
+   0%{
+      width: 0;
+   }
+   100%{
+      width: 100%;
+   }
+}
+
+@keyframes animate{
+   0%{
+       transform: rotate(0deg);
+   }
+   100%{
+       transform: rotate(360deg);
+   }
+}

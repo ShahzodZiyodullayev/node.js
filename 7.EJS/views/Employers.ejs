@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/users.css">
+   <script src="./js/users.js" defer></script>
+   <script src="https://kit.fontawesome.com/87e1470adc.js" crossorigin="anonymous"></script>
+   <title>Document</title>
+</head>
+<body>
+   <style>
+      body{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: 100vh;
+      }
+      li{
+         list-style: none;
+      }
+   </style>
+
+   <div id="line"></div>
+   <button class="btn"><a href="./#"><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i></a></button>
+
+   </h1>
+   <table>
+      <tr>
+         <th style="width: 200px; text-align: left;">Name</th>
+         <th style="width: 200px; text-align: left;">Phone</th>
+         <th style="width: 200px; text-align: left;">Email</th>
+      </tr>
+      <tr>
+         <td>
+            <% for(const item of users){%>
+               <li><%= item.name %></li>
+            <%}%>
+         </td>
+         <td>
+            <% for(const item of users){%>
+               <li><%= item.phone %></li>
+            <%}%>
+         </td>
+         <td>
+            <% for(const item of users){%>
+               <li><%= item.email %></li>
+            <%}%>
+         </td>
+      </tr>
+   </table>
+
+</body>
+</html>
